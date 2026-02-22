@@ -29,7 +29,7 @@ body:
       required: true
 
   - type: input
-    id: country
+    id: country_code
     attributes:
       label: Country Code of the Vendor
       description: Specify what country Code the vendor is for (it is assumed you're using it in the same country here)
@@ -54,7 +54,40 @@ body:
       placeholder: https://ui.idp.vonage.com/ui/auth/registration
     validations:
       required: true
-  
+      
+  - type: input
+    id: pricing
+    attributes:
+      label: Link to Vendor's Pricing
+      description: Paste the pricing link
+      placeholder: https://www.vonage.co.uk/communications-apis/pricing/
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: stars
+    attributes:
+      label: How many stars will you give the service?
+      description: How many stars will you give the service?
+      multiple: false
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    validations:
+        required: true
+        
+  - type: input
+    id: thirdparty
+    attributes:
+      label: Any Link to 3rd Party reviewing the vendor (trustpilot/consumer reports/any blog etc..)
+      description: Paste the link
+      placeholder: https://www.trustpilot.com/review/www.vonage.co.uk
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:
