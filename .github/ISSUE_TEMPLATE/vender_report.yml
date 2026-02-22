@@ -20,6 +20,24 @@ body:
           required: true
 
   - type: input
+    id: country
+    attributes:
+      label: Country of the Vendor
+      description: Specify what country the vendor is for (it is assumed you're using it in the same country here)
+      placeholder: UK
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country Code of the Vendor
+      description: Specify what country Code the vendor is for (it is assumed you're using it in the same country here)
+      placeholder: +44
+    validations:
+      required: true
+
+  - type: input
     id: vendor_name
     attributes:
       label: Vendor name
@@ -36,12 +54,30 @@ body:
       placeholder: https://ui.idp.vonage.com/ui/auth/registration
     validations:
       required: true
-
-  - type: input
-    id: country
+  
+  - type: textarea
+    id: description
     attributes:
-      label: Country of the Vendor
-      description: Specify what country the vendor is for (it is assumed you're using it in the same country here)
-      placeholder: UK
+      label: Description of the Vendor's functionality
+      description: |
+        What happens when you use the vendor? What tasks do work and don't work? What is the expected outcome of each thing you do? Did you test any other configurations and setups? Please mention all the steps to reproduce any issues. Do not leave out any information.
+
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
     validations:
       required: true
+
+  - type: textarea
+    id: extra_notes
+    attributes:
+      label: Are there any extra notes you think users should know about?
+      description: |
+        Did you do any workarounds other users should know that aren't listed here?
+
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this report. Please keep tabs on it in case we get back to you.
