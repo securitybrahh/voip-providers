@@ -1,0 +1,47 @@
+name: Submit your VoIP Provider report
+description: Report a GOOD VoIP Provider
+title: "[Replace this with the name of the provider]"
+labels: ["vendor report"]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        If you haven't already, please view the official [Carrier Guide](https://www.empiresec.co/voip). 
+        
+        Want to dig into supporting your favourite carrier on some messaging app see [Soprani's Wiki](https://wiki.soprani.ca/).
+
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: For updates or changes, comment on the existing reports. Check for existing issues to prevent duplicates. 
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: input
+    id: vendor_name
+    attributes:
+      label: Vendor name
+      description: What is the Vendor called?
+      placeholder: Vonage
+    validations:
+      required: true
+
+  - type: input
+    id: signup_link
+    attributes:
+      label: Link to Vendor's Signup URL
+      description: Paste the signup link
+      placeholder: https://ui.idp.vonage.com/ui/auth/registration
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country of the Vendor
+      description: Specify what country the vendor is for (it is assumed you're using it in the same country here)
+      placeholder: UK
+    validations:
+      required: true
