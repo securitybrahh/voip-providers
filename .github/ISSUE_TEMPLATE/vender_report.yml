@@ -23,8 +23,8 @@ body:
     id: country
     attributes:
       label: Country of the Vendor
-      description: Specify what country the vendor is for (it is assumed you're using it in the same country here)
-      placeholder: UK
+      description: Specify what country/region/global the vendor is for (it is assumed you're using it in the same country here)
+      placeholder: UK/Europe/Global
     validations:
       required: true
 
@@ -33,7 +33,7 @@ body:
     attributes:
       label: Country Code of the Vendor
       description: Specify what country Code the vendor is for (it is assumed you're using it in the same country here)
-      placeholder: "+44"
+      placeholder: "+44/+MULTIPLE"
     validations:
       required: true
 
